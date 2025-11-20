@@ -20,12 +20,25 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    # Lint code with Checkstyle
+    - name: Run Checkstyle
+      run: mvn checkstyle:check
+
+    # Run SpotBugs static analysis
+    - name: Run SpotBugs
+      run: mvn spotbugs:check
+
+    # Build and run tests
     - name: Build with Maven
       run: mvn -B verify
+
+    # Generate JavaDoc
     - name: Generate JavaDoc
       run: mvn javadoc:javadoc
+
+    # Upload JavaDoc artifact
     - name: Upload JavaDoc artifact
       uses: actions/upload-artifact@v4
       with:
-       name: javadoc
-       path: target/site/apidocs
+        name: javadoc
+        path: target/site/apidocs
