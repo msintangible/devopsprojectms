@@ -32,6 +32,20 @@ jobs:
     - name: Build with Maven
       run: mvn -B verify
 
+    # Upload test reports
+    - name: Upload Test Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: target/surefire-reports
+
+    # Upload JaCoCo coverage report
+    - name: Upload JaCoCo Coverage Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: jacoco-report
+        path: target/site/jacoco  
+
     # Generate JavaDoc
     - name: Generate JavaDoc
       run: mvn javadoc:javadoc
