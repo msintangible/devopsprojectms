@@ -1,0 +1,19 @@
+version: 2
+updates:
+
+  # Update Maven dependencies + plugin versions in pom.xml
+  - package-ecosystem: "maven"
+    directory: "/"          # your pom.xml is in the root
+    schedule:
+      interval: "weekly"    # or "daily", "monthly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+
+  # Update GitHub Actions versions in your CI workflow
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "ci"
