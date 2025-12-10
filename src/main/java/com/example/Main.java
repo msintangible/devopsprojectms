@@ -1,4 +1,4 @@
-package src.main;
+package com.example;
 /*
 written by : micheal salami
 date 19/09/2023

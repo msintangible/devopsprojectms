@@ -1,4 +1,4 @@
-package src.test;
+package com.example;
 import org.junit.jupiter.api.Test;
 
 import src.main.Calculator;
