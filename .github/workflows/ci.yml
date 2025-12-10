@@ -2,10 +2,12 @@ name: Java CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main         # Deploy or final CI
+      - "**"         # Run CI on all branches
   pull_request:
-    branches: [ "main" ]
-
+    branches:
+      - main    # PRs targeting main branch
 jobs:
   build:
     runs-on: ubuntu-latest
