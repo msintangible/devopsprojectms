@@ -36,14 +36,14 @@ jobs:
 
     # Upload test reports
     - name: Upload Test Reports
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: test-results
         path: target/surefire-reports
 
     # Upload JaCoCo coverage report
     - name: Upload JaCoCo Coverage Report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: jacoco-report
         path: target/site/jacoco  
@@ -54,7 +54,7 @@ jobs:
 
     # Upload JavaDoc artifact
     - name: Upload JavaDoc artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: javadoc
         path: target/site/apidocs
