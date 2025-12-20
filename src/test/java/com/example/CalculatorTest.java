@@ -1,7 +1,7 @@
 package com.example;
 import org.junit.jupiter.api.Test;
 
-import src.main.Calculator;
+import com.example.Calculator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
